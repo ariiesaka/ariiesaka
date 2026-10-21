@@ -11,6 +11,19 @@ main {
   padding: 1rem;
 }
 
+.intro-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.intro-mark {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+}
+
 section + section {
   margin-top: 1.5rem;
   padding-top: 0.5rem;

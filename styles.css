@@ -6,3 +6,7 @@ body {
 p {
   max-width: 65ch;
 }
+
+article + article {
+  margin-top: 2rem;
+}

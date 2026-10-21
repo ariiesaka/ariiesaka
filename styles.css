@@ -2,3 +2,7 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
 }
+
+p {
+  max-width: 65ch;
+}

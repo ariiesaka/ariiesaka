@@ -1,8 +1,8 @@
 ## Agent skills
 
-### Issue tracker
+### Project notes and issue tracker
 
-Issues and specs live as Markdown files under `.scratch/<feature-slug>/`. See `docs/agents/issue-tracker.md`.
+Project decisions, approved website copy, research, specs, and tickets live in the local Obsidian vault. Before planning or implementing website work, read `docs/agents/issue-tracker.md` for the canonical note locations and workflow. Keep private planning and unpublished career details in the vault.
 
 ### Triage labels
 

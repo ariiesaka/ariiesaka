@@ -11,6 +11,12 @@ main {
   padding: 1rem;
 }
 
+section + section {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #404040;
+}
+
 p {
   max-width: 65ch;
 }

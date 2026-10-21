@@ -17,6 +17,22 @@ section + section {
   border-top: 1px solid #404040;
 }
 
+a {
+  color: inherit;
+  text-decoration-color: #888888;
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2em;
+}
+
 p {
   max-width: 65ch;
 }

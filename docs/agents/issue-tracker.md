@@ -1,30 +1,26 @@
-# Issue tracker: Local Markdown
+# Personal website notes and issue tracker
 
-Issues and specs for this repo live as markdown files in `.scratch/`.
+The private Obsidian Knowledge vault is the source of truth for project planning. The website repository is public, so keep private planning and unpublished career details in the vault.
 
-## Conventions
+## Note layout
 
-- One feature per directory: `.scratch/<feature-slug>/`
-- The spec is `.scratch/<feature-slug>/spec.md`
-- Implementation issues are one file per ticket at `.scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01`, never a single combined tickets file
-- Triage state is recorded as a `Status:` line near the top of each issue file (see `triage-labels.md` for the role strings)
-- Comments and conversation history append to the bottom of the file under a `## Comments` heading
+- `Projects/Personal Website/Overview.md` is the project hub: goal, audience, settled decisions, and links to the other project notes.
+- `Projects/Personal Website/Content.md` holds the current public-facing copy and page outline. `Knowledge/Career Profile.md` remains the source for career facts and publication boundaries.
+- `Projects/Personal Website/Tracker.md` is the index of feature status and links to their specs and tickets.
+- Each feature has `Projects/Personal Website/Features/<slug>/spec.md` and one or more numbered notes in `issues/`.
+- `Projects/Personal Website/Research.md` holds background research, separate from active work tracking.
 
-## When a skill says "publish to the issue tracker"
+## Workflow
 
-Create a new file under `.scratch/<feature-slug>/` (creating the directory if needed).
+1. Before planning or implementing, read `Overview.md`, `Tracker.md`, and the relevant feature spec and ticket.
+2. Update the existing note that owns a decision or status. Keep one canonical copy of each fact; use links elsewhere.
+3. For new work, create one feature spec with a goal, scope, and acceptance criteria; create one small numbered ticket per independently executable task; link both from `Tracker.md`.
+4. Keep ticket comments under `## Comments` in the ticket note.
 
-## When a skill says "fetch the relevant ticket"
+Allowed `Work` values are `queued`, `in-progress`, `in-review`, `done`, and `cancelled`. `Status` is only for triage; use the labels and meanings in `docs/agents/triage-labels.md`. Start new tickets at `Status: needs-triage` and `Work: queued`. When work is accepted, remove `Status` and set `Work: in-progress`. When a PR opens, set `Work: in-review` and record its URL. After merge and verification, set `Work: done`; for rejected work, set `Work: cancelled`.
 
-Read the file at the referenced path. The user will normally pass the path or the issue number directly.
+When a skill asks to publish or fetch a ticket, update or read the feature-specific Obsidian notes and the tracker index. `.scratch/` is ignored temporary workspace, not the project tracker or a source of truth.
 
-## Wayfinding operations
+## Wayfinding
 
-Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.
-
-- **Map**: `.scratch/<effort>/map.md` (the Notes / Decisions-so-far / Fog body).
-- **Child ticket**: `.scratch/<effort>/issues/NN-<slug>.md`, numbered from `01`, with the question in the body. A `Type:` line records the ticket type (`research`/`prototype`/`grilling`/`task`); a `Status:` line records `claimed`/`resolved`.
-- **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every file it lists is `resolved`.
-- **Frontier**: scan `.scratch/<effort>/issues/` for files that are open, unblocked, and unclaimed; first by number wins.
-- **Claim**: set `Status: claimed` and save before any work.
-- **Resolve**: append the answer under an `## Answer` heading, set `Status: resolved`, then append a context pointer (gist + link) to the map's Decisions-so-far in `map.md`.
+If a wayfinding workflow is used, store its map at `Projects/Personal Website/Wayfinding/<effort>/map.md` and child tickets under that effort's `issues/` folder. Keep the map sections for Destination, Notes, Decisions so far, Not yet specified, and Out of scope. Number tickets, record blockers, claim before research, and mark resolved tickets with their answer and a context pointer in the map.

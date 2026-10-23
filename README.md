@@ -1,12 +1,6 @@
-# ariiesaka.dev
-
 a simple, text-first personal website.
 
 **live website:** [ariiesaka.dev](https://ariiesaka.dev)
-
-## about
-
-my personal website.
 
 ## made with
 

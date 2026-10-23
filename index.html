@@ -24,12 +24,53 @@
     >
     <link rel="icon" href="assets/raise-hand-emoji.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main>
       <section aria-labelledby="intro-title">
         <h1 id="intro-title">judah magaini</h1>
-        <p>engineering at Kredivo, previously at Traveloka and tiket.com</p>
+        <p class="employer-line">
+          engineering at
+          <button
+            class="company-trigger"
+            type="button"
+            data-company="kredivo"
+            aria-expanded="false"
+            aria-controls="team-popover"
+          >Kredivo</button>,
+          previously at
+          <button
+            class="company-trigger"
+            type="button"
+            data-company="traveloka"
+            aria-expanded="false"
+            aria-controls="team-popover"
+          >Traveloka</button>
+          and
+          <button
+            class="company-trigger"
+            type="button"
+            data-company="tiket"
+            aria-expanded="false"
+            aria-controls="team-popover"
+          >tiket.com</button>
+        </p>
+        <div
+          class="team-popover"
+          id="team-popover"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          hidden
+        >
+          <img
+            class="team-popover__logo"
+            src="assets/company-icons/kredivo.png"
+            alt=""
+          >
+          <span class="team-popover__team"></span>
+        </div>
         <p class="intro-contact">
           connect on
           <a href="https://www.linkedin.com/in/judah-ariesaka">LinkedIn</a>

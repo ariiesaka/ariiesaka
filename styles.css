@@ -30,6 +30,113 @@ main {
   margin: 2rem 0 0;
 }
 
+.employer-line {
+  margin-block: 1rem;
+}
+
+.company-trigger {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #888888;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.company-trigger:hover,
+.company-trigger[aria-expanded="true"] {
+  text-decoration-color: currentColor;
+}
+
+.company-trigger:active {
+  opacity: 0.78;
+}
+
+.company-trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.team-popover {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: max-content;
+  max-width: min(20rem, calc(100vw - 24px));
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #383838;
+  border-radius: 12px;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 24%);
+  opacity: 0;
+  transform: translateY(5px) scale(0.98);
+  transform-origin: var(--origin-x, 50%) var(--origin-y, 100%);
+  pointer-events: none;
+  transition:
+    opacity 160ms ease-out,
+    transform 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.team-popover[hidden] {
+  display: none;
+}
+
+.team-popover[data-open] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.team-popover[data-side="top"]::before,
+.team-popover[data-side="bottom"]::before {
+  position: absolute;
+  left: var(--arrow-x, 50%);
+  width: 9px;
+  height: 9px;
+  border: 1px solid #383838;
+  background: #1a1a1a;
+  content: "";
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.team-popover[data-side="top"]::before {
+  bottom: -5px;
+  border-top: 0;
+  border-left: 0;
+}
+
+.team-popover[data-side="bottom"]::before {
+  top: -5px;
+  border-bottom: 0;
+  border-right: 0;
+}
+
+.team-popover__logo {
+  display: block;
+  flex: 0 0 auto;
+  width: 1em;
+  height: 1em;
+  border-radius: 4px;
+  background: #f0f0f0;
+  object-fit: cover;
+}
+
+.team-popover__team {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
 .intro-contact a {
   display: inline-flex;
   align-items: center;
@@ -65,5 +172,22 @@ p {
 
   main {
     margin-block-start: 1rem;
+  }
+
+  .company-trigger::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 0.5rem);
+    height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-popover {
+    transform: none;
+    transition: opacity 120ms ease-out;
   }
 }

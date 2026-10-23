@@ -50,7 +50,7 @@ The page is a compact, candid professional introduction. Recruiters and fellow e
 - **Soft White** (#f5f5f5): Main text and headings.
 - **Muted Gray** (#b8b8b8): Supporting text.
 - **Underline Gray** (#888888): Resting link underline.
-- The raising-hand emoji appears only as the favicon.
+- The raising-hand emoji is used only as the browser-tab favicon; it does not appear in the page body.
 
 ## Typography
 
@@ -60,7 +60,7 @@ Use IBM Plex Sans with a system sans-serif fallback. Keep hierarchy compact: 2re
 
 Center a single reading column capped at 65ch with 1rem of inline page padding on desktop. Keep the name, employer history, and contact sentence in that order, with 2rem of space before the contact sentence. On narrow screens, align the content near the top and let text wrap naturally.
 
-## Interaction
+## Links
 
 The LinkedIn and email links remain inline in the final sentence, with at least 44px of height for comfortable tapping, soft-white text, a muted resting underline, and a visible keyboard focus outline.
 

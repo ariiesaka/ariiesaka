@@ -1,143 +1,41 @@
 body {
-  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
   line-height: 1.6;
   background-color: #111111;
   color: #f5f5f5;
 }
 
+h1 {
+  margin-block: 0.35em;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
 main {
-  max-width: 65ch;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(65ch + 2rem);
   margin-inline: auto;
   padding: 1rem;
 }
 
-.intro-heading {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.intro-heading h1 {
-  margin-block: 0.35em;
-}
-
-.intro-mark {
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  flex: 0 0 auto;
-}
-
 .intro-contact {
-  margin: 0.75rem 0 0;
+  margin: 2rem 0 0;
 }
 
 .intro-contact a {
-  display: inline-block;
-  padding-block: 0.6rem;
-}
-
-section + section {
-  margin-top: 1.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid #404040;
-}
-
-.company-heading {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-}
-
-.company-logo {
-  display: block;
   box-sizing: border-box;
-  flex: 0 0 auto;
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  border-radius: 0.625rem;
-}
-
-.company-heading h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.entry-meta,
-.entry-team {
-  margin: 0.3rem 0 0;
-}
-
-.entry-dates {
-  display: block;
-  margin-top: 0.15rem;
-  color: #b8b8b8;
-  font-size: 0.9rem;
-  font-variant-numeric: tabular-nums;
-}
-
-.entry-team {
-  color: #b8b8b8;
-}
-
-.timeline {
-  margin: 1.75rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.timeline-entry {
-  min-width: 0;
-}
-
-.timeline--spine .timeline-entry {
-  position: relative;
-  margin-left: 0.5rem;
-  padding: 0 0 2rem 1.5rem;
-  border-left: 1px solid #555555;
-}
-
-.timeline--spine .timeline-entry:last-child {
-  padding-bottom: 0;
-  border-left-color: transparent;
-}
-
-.timeline--spine .timeline-entry:last-child::after {
-  position: absolute;
-  top: 0;
-  left: -1px;
-  z-index: 0;
-  height: 0.86rem;
-  border-left: 1px solid #555555;
-  content: "";
-}
-
-.timeline--spine .timeline-entry:first-child {
-  border-left-color: transparent;
-}
-
-.timeline--spine .timeline-entry:first-child::after {
-  position: absolute;
-  top: 0.86rem;
-  bottom: 0;
-  left: -1px;
-  z-index: 0;
-  width: 0;
-  border-left: 1px solid #555555;
-  content: "";
-}
-
-.timeline--spine .timeline-entry::before {
-  position: absolute;
-  top: 0.58rem;
-  left: -0.35rem;
-  z-index: 1;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: #b0b0b0;
-  content: "";
+  min-height: 44px;
+  padding-block: 0.6rem;
 }
 
 a {
@@ -158,4 +56,14 @@ a:focus-visible {
 
 p {
   max-width: 65ch;
+}
+
+@media (max-width: 40rem) {
+  body {
+    place-items: start center;
+  }
+
+  main {
+    margin-block-start: 1rem;
+  }
 }

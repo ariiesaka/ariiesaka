@@ -24,7 +24,7 @@ The site is publicly available at ariiesaka.dev and is read in a web browser by 
 
 ## Capabilities and Constraints
 
-- The current site uses plain HTML and CSS.
+- The current site uses plain HTML, CSS and one small script, with no dependencies.
 - Public career claims must match details approved for the website. Do not invent project examples, metrics, or expertise.
 - Keep implementation changes small enough to support Judah's step-by-step learning of frontend development.
 
@@ -38,7 +38,7 @@ The site is publicly available at ariiesaka.dev and is read in a web browser by 
 ## Evidence on Hand
 
 - The current `index.html` contains the name, a concise employer-history sentence, and inline contact links.
-- There are not yet end-to-end projects ready to present as portfolio work. Do not invent projects or client results.
+- The one public side project is kana (kana.ariiesaka.dev), a hiragana and katakana chart and typing test. Do not invent other projects or client results.
 
 ## Product Principles
 

@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-mode="ink">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#253532">
     <title>judah magaini</title>
     <meta
       name="description"
@@ -16,6 +17,13 @@
       content="engineering at Kredivo, previously at Traveloka and tiket.com"
     >
     <meta name="twitter:card" content="summary">
+    <script>
+      // Apply the saved theme before first paint so there's no flash.
+      try {
+        const mode = localStorage.getItem('mode')
+        if (mode === 'ink' || mode === 'paper') document.documentElement.dataset.mode = mode
+      } catch {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,21 +32,47 @@
     >
     <link rel="icon" href="assets/raise-hand-emoji.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <button class="mode" type="button" aria-label="switch to paper theme">
+      <svg viewBox="0 0 20 20" aria-hidden="true">
+        <circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor" />
+      </svg>
+    </button>
+
     <main>
       <section aria-labelledby="intro-title">
-        <h1 id="intro-title">judah magaini</h1>
-        <p class="employer-line">
+        <h1 id="intro-title" class="reveal" style="--i: 0">
+          judah magaini<button class="wave" type="button" aria-label="hide the hand"><img src="assets/raise-hand-emoji.svg" alt="" width="128" height="128"></button>
+        </h1>
+        <p class="lede reveal" style="--i: 1">
           engineering at Kredivo, previously at Traveloka and tiket.com
         </p>
-        <p class="intro-contact">
+        <p class="side reveal" style="--i: 2">
+          on the side:
+          <a class="peek-link" href="https://kana.ariiesaka.dev">kana</a>,
+          a chart and typing test for learning hiragana and katakana.
+        </p>
+        <p class="contact reveal" style="--i: 3">
           connect with me on
           <a href="https://www.linkedin.com/in/judah-ariesaka">LinkedIn</a>
           or
-          <a href="mailto:judahutauruk12@gmail.com">send me an email</a>
+          <a href="mailto:judahutauruk12@gmail.com">send me an email</a><button class="copy" type="button" aria-label="copy email address">
+            <svg class="copy-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="5.5" y="5.5" width="8" height="8" rx="2" />
+              <path d="M10.5 3.5v-.25A1.25 1.25 0 0 0 9.25 2h-5A1.25 1.25 0 0 0 3 3.25v5A1.25 1.25 0 0 0 4.25 9.5h.25" />
+            </svg>
+            <svg class="check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m3.5 8.5 3 3 6-7" />
+            </svg>
+            <span class="tip" role="status"></span>
+          </button>
         </p>
       </section>
     </main>
+
+    <div class="peek" aria-hidden="true"><span>か</span></div>
   </body>
 </html>

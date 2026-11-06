@@ -64,12 +64,8 @@ p {
   color: var(--muted);
 }
 
-.side {
-  margin-top: 2.5rem;
-}
-
 .contact {
-  margin-top: 1.25rem;
+  margin-top: 2.5rem;
 }
 
 a {
@@ -103,11 +99,6 @@ button:focus-visible {
   position: absolute;
   inset: -0.6em 0;
   content: "";
-}
-
-.peek-link {
-  font-weight: 700;
-  text-decoration-color: var(--muted);
 }
 
 /* First load: lines blur in one after another. */
@@ -194,26 +185,6 @@ button:focus-visible {
 ::view-transition-new(root) {
   animation: none;
   mix-blend-mode: normal;
-}
-
-/* kana icon that comes out of the link and trails the pointer; motion is driven from script.js. */
-.peek {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: grid;
-  place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 9px;
-  background: var(--fg);
-  color: var(--bg);
-  font: 700 1.125rem/1 "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
-  box-shadow: 0 14px 30px -12px var(--shade);
-  pointer-events: none;
-  opacity: 0;
-  transform-origin: center;
 }
 
 /* Copy email: the icon blurs into a drawn check, a small tooltip confirms. */

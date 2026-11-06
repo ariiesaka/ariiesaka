@@ -35,7 +35,7 @@ The page is a compact, candid professional introduction. Recruiters and fellow e
 **Key characteristics:**
 - Text-first, single-column layout.
 - Two-color palette: green (ink) by default, with a paper theme one click away.
-- Name, employer sentence, one side project (kana), and a contact sentence.
+- Name, employer sentence, and a contact sentence.
 - No cards, sections, or decorative imagery beyond the favicon hand next to the name.
 
 ## Colors
@@ -56,7 +56,6 @@ Center a single reading column capped at 34rem. Order: name, employer sentence, 
 ## Links and controls
 
 - Links are inline with a faint resting underline that strengthens on hover, and a visible focus outline.
-- The kana link shows the kana icon on hover (mouse only). The icon grows out of the link, trails the pointer below-right so it never covers the name, and returns into the link in exact reverse.
 - The hand next to the name slides left behind it on hover (back on leave) or on tap (back after ~2s).
 - The copy button after the email link turns into a drawn check with a "copied" tooltip.
 
@@ -74,6 +73,6 @@ Center a single reading column capped at 34rem. Order: name, employer sentence, 
 - Keep links visibly interactive and keyboard accessible.
 
 ### Don't
-- Add a separate experience section, cards, extra colors, or shadows beyond the kana icon.
+- Add a separate experience section, cards, extra colors, or shadows.
 - Add navigation or sections that repeat the introduction.
 - Add libraries or frameworks; the site is plain HTML, CSS and one small script.

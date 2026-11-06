@@ -38,7 +38,6 @@ The site is publicly available at ariiesaka.dev and is read in a web browser by 
 ## Evidence on Hand
 
 - The current `index.html` contains the name, a concise employer-history sentence, and inline contact links.
-- The one public side project is kana (kana.ariiesaka.dev), a hiragana and katakana chart and typing test. Do not invent other projects or client results.
 
 ## Product Principles
 
